@@ -7,3 +7,8 @@ export function printToFile (text: string, callback: () => void): void {
 
 //Function with params----------------
 
+export function arrayMutate(numbers: number[], mutate: (v: number) => number): number[] {
+    return numbers.map(mutate);
+}
+
+console.log(arrayMutate([1, 2, 3], (v) => v * 10));
