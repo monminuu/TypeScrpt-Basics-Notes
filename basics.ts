@@ -45,6 +45,23 @@ const ids: Record<number, string> = {
 ids[30] = "c";
 
 
+//Conditional & Expressions------------------
+
+if(ids[30] === "D"){
+}
+
+//Loops----------------
+
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
+//NOTE: there's no need to define type of i in for loop because it is inferred
+
+[1, 2, 3, 4].forEach((v) => console.log(v));
+const out: number[] = [4, 5, 6].map((v) => v * 10);
+
+
+
 
 
 
