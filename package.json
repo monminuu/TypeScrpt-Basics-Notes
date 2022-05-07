@@ -1,0 +1,19 @@
+{
+  "name": "typescrpt-basics-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monminuu/TypeScrpt-Basics-Notes.git"
+  },
+  "author": "Monika",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monminuu/TypeScrpt-Basics-Notes/issues"
+  },
+  "homepage": "https://github.com/monminuu/TypeScrpt-Basics-Notes#readme"
+}
