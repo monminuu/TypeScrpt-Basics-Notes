@@ -5,10 +5,21 @@ export function printToFile (text: string, callback: () => void): void {
     callback();
 }
 
+
+//Functions as type--------------------
+
+export type MutationFunction = (v: number) => number;
+
+
 //Function with params----------------
 
-export function arrayMutate(numbers: number[], mutate: (v: number) => number): number[] {
+export function arrayMutate(numbers: number[], mutate: MutationFunction): number[] {
     return numbers.map(mutate);
 }
 
+
 console.log(arrayMutate([1, 2, 3], (v) => v * 10));
+
+//exporting MutationFunction to another function
+
+const newMutateFunc: MutationFunction = (v: number) => v * 100;
