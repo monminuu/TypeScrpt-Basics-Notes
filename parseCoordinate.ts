@@ -22,6 +22,7 @@ function parseCoordinateFromNumbers(x: number, y: number): Coordinate {
 // We can also write the above two functions as follows:
 
 function parseCoordinate(obj: Coordinate): Coordinate;
+function parseCoordinate(str: string): Coordinate;
 function parseCoordinate(x: number, y: number): Coordinate;
 
 
@@ -33,7 +34,14 @@ function parseCoordinate(arg1: unknown, arg2?: unknown): Coordinate {
         y:0,
     };
 
-    if (typeof arg1 === "object"){
+
+    if (typeof arg1 === "string"){
+        (arg1 as String).split(",").forEach(str => {
+            const [key, value] = str.split(":");
+            coord[key as "x" | "y"] = parseInt(value, 10)
+        })
+
+    } else if (typeof arg1 === "object"){
         coord = {
             ...(arg1 as Coordinate),
         };
@@ -48,5 +56,7 @@ function parseCoordinate(arg1: unknown, arg2?: unknown): Coordinate {
 }
 
 console.log(parseCoordinate(80, 70));
+console.log(parseCoordinate("x:44,y:22"));
+
 
 
