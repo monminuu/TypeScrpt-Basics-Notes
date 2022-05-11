@@ -12,3 +12,5 @@
 // A. run command: npx tsc function.ts
 //      it will give us function.js.
 //      ts will compile itself into js force.
+
+//INPUT tag i.e <input> turns number into string
